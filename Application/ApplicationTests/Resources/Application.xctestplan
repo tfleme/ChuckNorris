@@ -1,0 +1,73 @@
+{
+  "configurations" : [
+    {
+      "id" : "E0872ECF-9333-4D07-9922-4E318FF0556B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Application.xcodeproj",
+          "identifier" : "A157DA7A234CCEF0002922DC",
+          "name" : "Application"
+        },
+        {
+          "containerPath" : "container:..\/Domain\/Domain.xcodeproj",
+          "identifier" : "A19847B1234FC59800E37F43",
+          "name" : "Domain"
+        },
+        {
+          "containerPath" : "container:..\/Services\/Services.xcodeproj",
+          "identifier" : "A11D5E862361261500244E92",
+          "name" : "Services"
+        }
+      ]
+    },
+    "environmentVariableEntries" : [
+      {
+        "key" : "FB_REFERENCE_IMAGE_DIR",
+        "value" : "$(SOURCE_ROOT)\/$(PROJECT_NAME)Tests\/Snapshot\/ReferenceImages"
+      },
+      {
+        "key" : "IMAGE_DIFF_DIR",
+        "value" : "$(SOURCE_ROOT)\/$(PROJECT_NAME)Tests\/Snapshot\/FailureDiffs"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Application.xcodeproj",
+      "identifier" : "A157DA7A234CCEF0002922DC",
+      "name" : "Application"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Application.xcodeproj",
+        "identifier" : "A11D5E0A236120CE00244E92",
+        "name" : "ApplicationTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:..\/Domain\/Domain.xcodeproj",
+        "identifier" : "A10CD87A2362522E00E5CA9F",
+        "name" : "DomainTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:..\/Services\/Services.xcodeproj",
+        "identifier" : "A11D5E8F2361261500244E92",
+        "name" : "ServicesTests"
+      }
+    }
+  ],
+  "version" : 1
+}

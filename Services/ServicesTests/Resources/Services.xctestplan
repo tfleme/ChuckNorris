@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "CDF5F5F0-C25C-4604-A283-CD53622DD48B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Services.xcodeproj",
+          "identifier" : "A11D5E862361261500244E92",
+          "name" : "Services"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Services.xcodeproj",
+        "identifier" : "A11D5E8F2361261500244E92",
+        "name" : "ServicesTests"
+      }
+    }
+  ],
+  "version" : 1
+}

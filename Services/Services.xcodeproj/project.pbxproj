@@ -1,0 +1,821 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BAA235DB2B36E5C6D5258DD /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 861272D9C12934C83616C7AF /* Pods_Services.framework */; };
+		419A44897CE7B61B6B137893 /* Pods_Services_ServicesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5AE669AA08C5B6825E4C82 /* Pods_Services_ServicesTests.framework */; };
+		A11D5E912361261500244E92 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11D5E872361261500244E92 /* Services.framework */; };
+		A11D5E982361261500244E92 /* Services.h in Headers */ = {isa = PBXBuildFile; fileRef = A11D5E8A2361261500244E92 /* Services.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A11D5EBF2361265600244E92 /* ChuckNorrisAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EA42361265500244E92 /* ChuckNorrisAPI.swift */; };
+		A11D5EC02361265600244E92 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EA62361265500244E92 /* NetworkAdapter.swift */; };
+		A11D5EC32361265600244E92 /* ChuckNorrisServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EAC2361265500244E92 /* ChuckNorrisServices.swift */; };
+		A11D5EC42361265600244E92 /* ChuckNorrisServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EAD2361265500244E92 /* ChuckNorrisServicesFactory.swift */; };
+		A11D5EC52361265600244E92 /* ImageFetcherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EAF2361265500244E92 /* ImageFetcherServices.swift */; };
+		A11D5EC62361265600244E92 /* ImageFetcherServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EB02361265500244E92 /* ImageFetcherServicesFactory.swift */; };
+		A11D5EC72361265600244E92 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EB22361265500244E92 /* DependencyContainer.swift */; };
+		A11D5EC82361265600244E92 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EB52361265500244E92 /* NetworkRequest.swift */; };
+		A11D5EC92361265600244E92 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EB62361265500244E92 /* Endpoint.swift */; };
+		A11D5ECA2361265600244E92 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EB82361265500244E92 /* ServiceError.swift */; };
+		A11D5ECD2361265600244E92 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D5EBD2361265600244E92 /* Cache.swift */; };
+		A1A4BBEA23626E97009DE345 /* NetworkAdapterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4BBE923626E97009DE345 /* NetworkAdapterStub.swift */; };
+		A1A4BBEC23626F44009DE345 /* ChuckNorrisServices+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4BBEB23626F44009DE345 /* ChuckNorrisServices+Specs.swift */; };
+		A1A4BBF02362728A009DE345 /* ImageFetcherServices+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4BBEF2362728A009DE345 /* ImageFetcherServices+Specs.swift */; };
+		A1A4BBF223627365009DE345 /* CacheStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4BBF123627365009DE345 /* CacheStub.swift */; };
+		A1A4BBF6236274FF009DE345 /* Cache+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4BBF5236274FF009DE345 /* Cache+Specs.swift */; };
+		A1A4BBF92362767C009DE345 /* NetworkAdapter+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4BBF82362767C009DE345 /* NetworkAdapter+Specs.swift */; };
+		A1A4BC002363713C009DE345 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A4BBFF2363713C009DE345 /* URLSession+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A11D5E922361261500244E92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A11D5E7E2361261500244E92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A11D5E862361261500244E92;
+			remoteInfo = Services;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10EE09F5CCC0787532B32279 /* Pods-Services.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.release.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.release.xcconfig"; sourceTree = "<group>"; };
+		1A5C4FA6E3ABD65E2B18D226 /* Pods-Services-ServicesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services-ServicesTests.release.xcconfig"; path = "Target Support Files/Pods-Services-ServicesTests/Pods-Services-ServicesTests.release.xcconfig"; sourceTree = "<group>"; };
+		77B761312D34D6C2AADB93AD /* Pods-Services-ServicesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services-ServicesTests.debug.xcconfig"; path = "Target Support Files/Pods-Services-ServicesTests/Pods-Services-ServicesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		861272D9C12934C83616C7AF /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11D5E872361261500244E92 /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11D5E8A2361261500244E92 /* Services.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
+		A11D5E8B2361261500244E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A11D5E902361261500244E92 /* ServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11D5E972361261500244E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A11D5EA42361265500244E92 /* ChuckNorrisAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChuckNorrisAPI.swift; sourceTree = "<group>"; };
+		A11D5EA62361265500244E92 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
+		A11D5EAC2361265500244E92 /* ChuckNorrisServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChuckNorrisServices.swift; sourceTree = "<group>"; };
+		A11D5EAD2361265500244E92 /* ChuckNorrisServicesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChuckNorrisServicesFactory.swift; sourceTree = "<group>"; };
+		A11D5EAF2361265500244E92 /* ImageFetcherServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherServices.swift; sourceTree = "<group>"; };
+		A11D5EB02361265500244E92 /* ImageFetcherServicesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherServicesFactory.swift; sourceTree = "<group>"; };
+		A11D5EB22361265500244E92 /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		A11D5EB52361265500244E92 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		A11D5EB62361265500244E92 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A11D5EB82361265500244E92 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		A11D5EBD2361265600244E92 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		A1A4BBE923626E97009DE345 /* NetworkAdapterStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdapterStub.swift; sourceTree = "<group>"; };
+		A1A4BBEB23626F44009DE345 /* ChuckNorrisServices+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChuckNorrisServices+Specs.swift"; sourceTree = "<group>"; };
+		A1A4BBED236270F5009DE345 /* Services.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Services.xctestplan; sourceTree = "<group>"; };
+		A1A4BBEF2362728A009DE345 /* ImageFetcherServices+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageFetcherServices+Specs.swift"; sourceTree = "<group>"; };
+		A1A4BBF123627365009DE345 /* CacheStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStub.swift; sourceTree = "<group>"; };
+		A1A4BBF5236274FF009DE345 /* Cache+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cache+Specs.swift"; sourceTree = "<group>"; };
+		A1A4BBF82362767C009DE345 /* NetworkAdapter+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAdapter+Specs.swift"; sourceTree = "<group>"; };
+		A1A4BBFF2363713C009DE345 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
+		D5BA533E1632F47CE20A5673 /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
+		EC5AE669AA08C5B6825E4C82 /* Pods_Services_ServicesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services_ServicesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A11D5E842361261500244E92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BAA235DB2B36E5C6D5258DD /* Pods_Services.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11D5E8D2361261500244E92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11D5E912361261500244E92 /* Services.framework in Frameworks */,
+				419A44897CE7B61B6B137893 /* Pods_Services_ServicesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42BADF372F9B682ED578EA64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				861272D9C12934C83616C7AF /* Pods_Services.framework */,
+				EC5AE669AA08C5B6825E4C82 /* Pods_Services_ServicesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70F7BF1392D61F807981AA42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA533E1632F47CE20A5673 /* Pods-Services.debug.xcconfig */,
+				10EE09F5CCC0787532B32279 /* Pods-Services.release.xcconfig */,
+				77B761312D34D6C2AADB93AD /* Pods-Services-ServicesTests.debug.xcconfig */,
+				1A5C4FA6E3ABD65E2B18D226 /* Pods-Services-ServicesTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		A11D5E7D2361261500244E92 = {
+			isa = PBXGroup;
+			children = (
+				A11D5E892361261500244E92 /* Services */,
+				A11D5E942361261500244E92 /* ServicesTests */,
+				A11D5E882361261500244E92 /* Products */,
+				70F7BF1392D61F807981AA42 /* Pods */,
+				42BADF372F9B682ED578EA64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A11D5E882361261500244E92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5E872361261500244E92 /* Services.framework */,
+				A11D5E902361261500244E92 /* ServicesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A11D5E892361261500244E92 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EB12361265500244E92 /* DependencyContainer */,
+				A11D5EAA2361265500244E92 /* Services */,
+				A11D5EB32361265500244E92 /* Model */,
+				A11D5EA22361265500244E92 /* Network */,
+				A11D5EB92361265600244E92 /* Utils */,
+				A11D5EA12361262A00244E92 /* Resources */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A11D5E942361261500244E92 /* ServicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1A4BBE823626E86009DE345 /* Stub */,
+				A1A4BBE723626E83009DE345 /* Specs */,
+				A1A4BBEE2362710C009DE345 /* Resources */,
+			);
+			path = ServicesTests;
+			sourceTree = "<group>";
+		};
+		A11D5EA12361262A00244E92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5E8A2361261500244E92 /* Services.h */,
+				A11D5E8B2361261500244E92 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A11D5EA22361265500244E92 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EA32361265500244E92 /* APIs */,
+				A11D5EA52361265500244E92 /* Adapter */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A11D5EA32361265500244E92 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EA42361265500244E92 /* ChuckNorrisAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		A11D5EA52361265500244E92 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EA62361265500244E92 /* NetworkAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		A11D5EAA2361265500244E92 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EAB2361265500244E92 /* ChuckNorris */,
+				A11D5EAE2361265500244E92 /* ImageFetcher */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A11D5EAB2361265500244E92 /* ChuckNorris */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EAC2361265500244E92 /* ChuckNorrisServices.swift */,
+				A11D5EAD2361265500244E92 /* ChuckNorrisServicesFactory.swift */,
+			);
+			path = ChuckNorris;
+			sourceTree = "<group>";
+		};
+		A11D5EAE2361265500244E92 /* ImageFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EAF2361265500244E92 /* ImageFetcherServices.swift */,
+				A11D5EB02361265500244E92 /* ImageFetcherServicesFactory.swift */,
+			);
+			path = ImageFetcher;
+			sourceTree = "<group>";
+		};
+		A11D5EB12361265500244E92 /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EB22361265500244E92 /* DependencyContainer.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		A11D5EB32361265500244E92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EB42361265500244E92 /* Network */,
+				A11D5EB72361265500244E92 /* Error */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A11D5EB42361265500244E92 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EB52361265500244E92 /* NetworkRequest.swift */,
+				A11D5EB62361265500244E92 /* Endpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A11D5EB72361265500244E92 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EB82361265500244E92 /* ServiceError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		A11D5EB92361265600244E92 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EBA2361265600244E92 /* Helpers */,
+				A1A4BBFE23637130009DE345 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A11D5EBA2361265600244E92 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A11D5EBD2361265600244E92 /* Cache.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A1A4BBE723626E83009DE345 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				A1A4BBF3236274DC009DE345 /* Services */,
+				A1A4BBF72362766D009DE345 /* Network */,
+				A1A4BBF4236274E0009DE345 /* Helpers */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		A1A4BBE823626E86009DE345 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				A1A4BBE923626E97009DE345 /* NetworkAdapterStub.swift */,
+				A1A4BBF123627365009DE345 /* CacheStub.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		A1A4BBEE2362710C009DE345 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1A4BBED236270F5009DE345 /* Services.xctestplan */,
+				A11D5E972361261500244E92 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1A4BBF3236274DC009DE345 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A1A4BBEB23626F44009DE345 /* ChuckNorrisServices+Specs.swift */,
+				A1A4BBEF2362728A009DE345 /* ImageFetcherServices+Specs.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A1A4BBF4236274E0009DE345 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A1A4BBF5236274FF009DE345 /* Cache+Specs.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A1A4BBF72362766D009DE345 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A1A4BBF82362767C009DE345 /* NetworkAdapter+Specs.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A1A4BBFE23637130009DE345 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1A4BBFF2363713C009DE345 /* URLSession+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A11D5E822361261500244E92 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11D5E982361261500244E92 /* Services.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A11D5E862361261500244E92 /* Services */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A11D5E9B2361261500244E92 /* Build configuration list for PBXNativeTarget "Services" */;
+			buildPhases = (
+				171AF1FBF4D9C8282659790C /* [CP] Check Pods Manifest.lock */,
+				A11D5E822361261500244E92 /* Headers */,
+				A11D5E832361261500244E92 /* Sources */,
+				A11D5E842361261500244E92 /* Frameworks */,
+				A11D5E852361261500244E92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Services;
+			productName = Services;
+			productReference = A11D5E872361261500244E92 /* Services.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A11D5E8F2361261500244E92 /* ServicesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A11D5E9E2361261500244E92 /* Build configuration list for PBXNativeTarget "ServicesTests" */;
+			buildPhases = (
+				EE9715E8BA564E5A8FD93770 /* [CP] Check Pods Manifest.lock */,
+				A11D5E8C2361261500244E92 /* Sources */,
+				A11D5E8D2361261500244E92 /* Frameworks */,
+				A11D5E8E2361261500244E92 /* Resources */,
+				7A1887FF48794E3C8ECC0581 /* [CP] Embed Pods Frameworks */,
+				A1A4BBFA23636EBD009DE345 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A11D5E932361261500244E92 /* PBXTargetDependency */,
+			);
+			name = ServicesTests;
+			productName = ServicesTests;
+			productReference = A11D5E902361261500244E92 /* ServicesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A11D5E7E2361261500244E92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Tiago Leme";
+				TargetAttributes = {
+					A11D5E862361261500244E92 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					A11D5E8F2361261500244E92 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = A11D5E812361261500244E92 /* Build configuration list for PBXProject "Services" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A11D5E7D2361261500244E92;
+			productRefGroup = A11D5E882361261500244E92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A11D5E862361261500244E92 /* Services */,
+				A11D5E8F2361261500244E92 /* ServicesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A11D5E852361261500244E92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11D5E8E2361261500244E92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		171AF1FBF4D9C8282659790C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Services-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A1887FF48794E3C8ECC0581 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Services-ServicesTests/Pods-Services-ServicesTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Services-ServicesTests/Pods-Services-ServicesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1A4BBFA23636EBD009DE345 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+		EE9715E8BA564E5A8FD93770 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Services-ServicesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A11D5E832361261500244E92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11D5ECA2361265600244E92 /* ServiceError.swift in Sources */,
+				A11D5EC72361265600244E92 /* DependencyContainer.swift in Sources */,
+				A11D5EC92361265600244E92 /* Endpoint.swift in Sources */,
+				A11D5EC52361265600244E92 /* ImageFetcherServices.swift in Sources */,
+				A11D5ECD2361265600244E92 /* Cache.swift in Sources */,
+				A11D5EC82361265600244E92 /* NetworkRequest.swift in Sources */,
+				A11D5EC42361265600244E92 /* ChuckNorrisServicesFactory.swift in Sources */,
+				A11D5EC02361265600244E92 /* NetworkAdapter.swift in Sources */,
+				A1A4BC002363713C009DE345 /* URLSession+Extensions.swift in Sources */,
+				A11D5EBF2361265600244E92 /* ChuckNorrisAPI.swift in Sources */,
+				A11D5EC62361265600244E92 /* ImageFetcherServicesFactory.swift in Sources */,
+				A11D5EC32361265600244E92 /* ChuckNorrisServices.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11D5E8C2361261500244E92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A4BBF02362728A009DE345 /* ImageFetcherServices+Specs.swift in Sources */,
+				A1A4BBEA23626E97009DE345 /* NetworkAdapterStub.swift in Sources */,
+				A1A4BBF223627365009DE345 /* CacheStub.swift in Sources */,
+				A1A4BBF92362767C009DE345 /* NetworkAdapter+Specs.swift in Sources */,
+				A1A4BBF6236274FF009DE345 /* Cache+Specs.swift in Sources */,
+				A1A4BBEC23626F44009DE345 /* ChuckNorrisServices+Specs.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A11D5E932361261500244E92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A11D5E862361261500244E92 /* Services */;
+			targetProxy = A11D5E922361261500244E92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A11D5E992361261500244E92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A11D5E9A2361261500244E92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A11D5E9C2361261500244E92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5BA533E1632F47CE20A5673 /* Pods-Services.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = H3543D9C5F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Services/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tfleme.ChuckNorrisServices;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A11D5E9D2361261500244E92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10EE09F5CCC0787532B32279 /* Pods-Services.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = H3543D9C5F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Services/Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tfleme.ChuckNorrisServices;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A11D5E9F2361261500244E92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77B761312D34D6C2AADB93AD /* Pods-Services-ServicesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H3543D9C5F;
+				INFOPLIST_FILE = ServicesTests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tfleme.ServicesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A11D5EA02361261500244E92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A5C4FA6E3ABD65E2B18D226 /* Pods-Services-ServicesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H3543D9C5F;
+				INFOPLIST_FILE = ServicesTests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tfleme.ServicesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A11D5E812361261500244E92 /* Build configuration list for PBXProject "Services" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11D5E992361261500244E92 /* Debug */,
+				A11D5E9A2361261500244E92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A11D5E9B2361261500244E92 /* Build configuration list for PBXNativeTarget "Services" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11D5E9C2361261500244E92 /* Debug */,
+				A11D5E9D2361261500244E92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A11D5E9E2361261500244E92 /* Build configuration list for PBXNativeTarget "ServicesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11D5E9F2361261500244E92 /* Debug */,
+				A11D5EA02361261500244E92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A11D5E7E2361261500244E92 /* Project object */;
+}

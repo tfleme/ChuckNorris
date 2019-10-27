@@ -1,0 +1,48 @@
+PODS:
+  - iOSSnapshotTestCase (6.1.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 6.1.0)
+  - iOSSnapshotTestCase/Core (6.1.0)
+  - iOSSnapshotTestCase/SwiftSupport (6.1.0):
+    - iOSSnapshotTestCase/Core
+  - KIF (3.7.8):
+    - KIF/Core (= 3.7.8)
+  - KIF/Core (3.7.8)
+  - Nimble (8.0.2)
+  - Quick (2.1.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+
+DEPENDENCIES:
+  - iOSSnapshotTestCase
+  - KIF
+  - Nimble
+  - Quick
+  - RxCocoa
+  - RxSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - iOSSnapshotTestCase
+    - KIF
+    - Nimble
+    - Quick
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  iOSSnapshotTestCase: 30d540b0c8feb9d7f8ff97acc25a3804b48ee264
+  KIF: 52e1af1a78cf6fe4ec6777b14776f3dd2eccc32e
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+
+PODFILE CHECKSUM: 28f96f33d77fa7ce388a209dbe1cc774e4ddb4bd
+
+COCOAPODS: 1.6.1

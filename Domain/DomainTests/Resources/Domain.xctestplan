@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "6966A4F1-39C9-4F08-B19B-4C8F21880E3D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Domain.xcodeproj",
+          "identifier" : "A19847B1234FC59800E37F43",
+          "name" : "Domain"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Domain.xcodeproj",
+      "identifier" : "A19847B1234FC59800E37F43",
+      "name" : "Domain"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/Domain\/Domain.xcodeproj",
+        "identifier" : "A10CD87A2362522E00E5CA9F",
+        "name" : "DomainTests"
+      }
+    }
+  ],
+  "version" : 1
+}
