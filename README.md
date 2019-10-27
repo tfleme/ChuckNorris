@@ -2,11 +2,11 @@
 
 A simple iOS app that lets you read some Chuck Norries jokes randomly based on categories
 
-## Architecuture
+## Architecture
 
 The app is built on **Clean MVVM-C** architecture with the Application, Domain and Services layers separated on they're own Xcode project/target in order to phisically create a separation of concerns boundary and leverage Swift's internal access level.
 
-This achitectural design was inspired by Uncle Bob's [Clean Swift Architecture]("https://clean-swift.com") and ajusted to make the application layer architecture agnostic so it could be implemented in MVVM, MVP, MVC etc.
+This achitectural design was inspired by Uncle Bob's * [Clean Swift Architecture]("https://clean-swift.com") and ajusted to make the application layer architecture agnostic so it could be implemented in MVVM, MVP, MVC etc.
 
 ![](Architecture/Architecture.png)
 
@@ -15,7 +15,6 @@ This achitectural design was inspired by Uncle Bob's [Clean Swift Architecture](
 ```
 Xcode 11.1
 iOS 9.*
-
 ```
 
 ### Installing
@@ -26,7 +25,6 @@ pod install
 ```
 
 And open:
-
 ```
 ChuckNorris.xcworkspace
 ```
