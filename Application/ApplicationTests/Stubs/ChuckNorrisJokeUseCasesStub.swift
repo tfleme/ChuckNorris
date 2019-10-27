@@ -15,6 +15,7 @@ struct ChuckNorrisJokeUseCasesStub: ChuckNorrisJokeUseCasesType {
     enum ResultType {
         case success
         case failure
+        case invalidJokeURL
     }
     
     //-----------------------------------------------------------------------------
@@ -26,7 +27,21 @@ struct ChuckNorrisJokeUseCasesStub: ChuckNorrisJokeUseCasesType {
         let data = """
             {
                 "icon_url": "https://mockurl.com",
-                "value": "This is a mock chuck norris joke with a big text so you can have a big big laugh"
+                "value": "This is a mock chuck norris joke with a big text so you can have a big big laugh",
+                "url": "https://mockjokeurl.com/"
+            }
+        """.data(using: .utf8)!
+        
+        return DecodableHelper.decode(data)!
+    }
+    
+    var mockedJokeInvalidURL: Joke {
+        
+        let data = """
+            {
+                "icon_url": "https://mockurl.com",
+                "value": "This is a mock chuck norris joke with a big text so you can have a big big laugh",
+                "url": ""
             }
         """.data(using: .utf8)!
         
@@ -65,6 +80,8 @@ struct ChuckNorrisJokeUseCasesStub: ChuckNorrisJokeUseCasesType {
             completion(.success(mockedJoke))
         case .failure:
             completion(.failure(ViewModelError(.generic)))
+        case .invalidJokeURL:
+            completion(.success(mockedJokeInvalidURL))
         }
         
     }
@@ -78,6 +95,8 @@ struct ChuckNorrisJokeUseCasesStub: ChuckNorrisJokeUseCasesType {
             completion(.success(mockedImageData))
         case .failure:
             completion(.failure(ViewModelError(.generic)))
+        case .invalidJokeURL:
+            completion(.success(mockedImageData))
         }
     }
 }

@@ -74,6 +74,21 @@ extension JokesCoordinator {
             })
             .disposed(by: disposeBag)
         
+        viewModel.activityURL
+            .subscribe(onNext: { url in
+                self.presentActivityViewController(with: url)
+            })
+            .disposed(by: disposeBag)
+        
         push(JokeViewController(viewModel: viewModel))
+    }
+    
+    private func presentActivityViewController(with url: URL) {
+        
+        let viewController = UIActivityViewController(
+            activityItems: [url],
+            applicationActivities: nil)
+        
+        present(viewController)
     }
 }

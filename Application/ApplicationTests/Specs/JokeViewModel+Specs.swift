@@ -84,6 +84,52 @@ final class JokeViewModel_Specs: QuickSpec {
                     expect(alertViewModel.value).notTo(beNil())
                 }
             }
+            
+            context("when joke is fetched with a valid url") {
+                it("isActivityButtonEnabled relay accepts true") {
+                    
+                    useCases = ChuckNorrisJokeUseCasesStub(resultType: .success)
+                    viewModel = JokeViewModel(jokeCategory: jokeCategory, useCases: useCases)
+                    
+                    let isEnabled = BehaviorRelay<Bool?>(value: nil)
+                    viewModel.isActivityButtonEnabled.bind(to: isEnabled).disposed(by: disposeBag)
+                    
+                    viewModel.viewDidAppear.accept(())
+                    
+                    expect(isEnabled.value) == true
+                }
+            }
+                
+            context("when joke is fetched with a valid url and activityButtonTap accepts a void event") {
+                it("activityURL accepts the joke url") {
+                    
+                    useCases = ChuckNorrisJokeUseCasesStub(resultType: .success)
+                    viewModel = JokeViewModel(jokeCategory: jokeCategory, useCases: useCases)
+                    
+                    let url = BehaviorRelay<URL?>(value: nil)
+                    viewModel.activityURL.bind(to: url).disposed(by: disposeBag)
+                    
+                    viewModel.viewDidAppear.accept(())
+                    viewModel.activityButtonTap.accept(())
+                    
+                    expect(url.value) == URL(string: useCases.mockedJoke.urlString)!
+                }
+            }
+            
+            context("when joke is fetched with an invalid url") {
+                it("isActivityButtonEnabled relay accepts false") {
+                    
+                    useCases = ChuckNorrisJokeUseCasesStub(resultType: .invalidJokeURL)
+                    viewModel = JokeViewModel(jokeCategory: jokeCategory, useCases: useCases)
+                    
+                    let isEnabled = BehaviorRelay<Bool?>(value: nil)
+                    viewModel.isActivityButtonEnabled.bind(to: isEnabled).disposed(by: disposeBag)
+                    
+                    viewModel.viewDidAppear.accept(())
+                     
+                    expect(isEnabled.value) == false
+                }
+            }
         }
         
         describe("memory leak") {

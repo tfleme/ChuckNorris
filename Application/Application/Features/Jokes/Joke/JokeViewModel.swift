@@ -22,11 +22,14 @@ final class JokeViewModel {
     private let jokeCategory: JokeCategory
     private let useCases: ChuckNorrisJokeUseCasesType
     
+    private var jokeURL: URL?
+    
     //-----------------------------------------------------------------------------
     // MARK: - Output relays
     //-----------------------------------------------------------------------------
     
     let dismiss = PublishRelay<Void>()
+    let activityURL = PublishRelay<URL>()
     
     //-----------------------------------------------------------------------------
     // MARK: - Input relays
@@ -39,9 +42,11 @@ final class JokeViewModel {
     let title: BehaviorRelay<String>
     let imageData = PublishRelay<Data?>()
     let description = PublishRelay<String>()
+    let isActivityButtonEnabled = BehaviorRelay<Bool>(value: false)
     
     let viewDidAppear = PublishRelay<Void>()
     let actionButtonTap = PublishRelay<Void>()
+    let activityButtonTap = PublishRelay<Void>()
     
     //-----------------------------------------------------------------------------
     // MARK: - Initialization
@@ -81,6 +86,14 @@ extension JokeViewModel {
                 self.fetchJoke(from: self.jokeCategory)
             })
             .disposed(by: disposeBag)
+        
+        activityButtonTap
+            .subscribe(onNext: { [weak self] in
+                guard let `self` = self, let url = self.jokeURL else { return }
+                
+                self.activityURL.accept(url)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -93,6 +106,9 @@ extension JokeViewModel {
     private func setup(with joke: Joke) {
      
         description.accept(joke.value)
+        
+        jokeURL = URL(string: joke.urlString)
+        isActivityButtonEnabled.accept(jokeURL != nil)
         
         fetchImageData(withURLString: joke.iconUrlString)
     }

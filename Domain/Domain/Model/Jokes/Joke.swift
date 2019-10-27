@@ -12,10 +12,12 @@ public struct Joke: Codable {
     
     public let iconUrlString: String
     public let value: String
+    public let urlString: String
     
     enum CodingKeys: String, CodingKey {
         case iconUrlString = "icon_url"
         case value = "value"
+        case urlString = "url"
     }
 }
 

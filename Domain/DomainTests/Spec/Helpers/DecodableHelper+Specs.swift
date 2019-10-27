@@ -26,11 +26,14 @@ final class DecodableHelper_Specs: QuickSpec {
                         
                         let mockedJoke = Joke(
                             iconUrlString: "https://mockurl.com",
-                            value: "This is a mock chuck norris joke with a text so you can have a big big laugh")
+                            value: "This is a mock chuck norris joke with a text so you can have a big big laugh",
+                            urlString: "https://mockurl.com")
+                        
                         let data = """
                             {
                                 "icon_url": "https://mockurl.com",
-                                "value": "This is a mock chuck norris joke with a text so you can have a big big laugh"
+                                "value": "This is a mock chuck norris joke with a text so you can have a big big laugh",
+                                "url": "https://mockurl.com"
                             }
                         """.data(using: .utf8)!
                         let joke: Joke = DecodableHelper.decode(data)!

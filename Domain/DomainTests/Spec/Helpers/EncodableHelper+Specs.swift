@@ -21,14 +21,15 @@ final class EncodableHelper_Specs: QuickSpec {
                 context("When a valid codable object is passed as an argument") {
                     it("returns an instance of the codable data object") {
                         
-                        let joke = Joke(
+                        let mockedJoke = Joke(
                             iconUrlString: "https://mockurl.com",
-                            value: "This is a mock chuck norris joke with a text so you can have a big big laugh")
+                            value: "This is a mock chuck norris joke with a text so you can have a big big laugh",
+                            urlString: "https://mockurl.com")
    
-                        let data: Data = EncodableHelper.encode(joke)!
+                        let data: Data = EncodableHelper.encode(mockedJoke)!
                         let decodedJoke: Joke = DecodableHelper.decode(data)!
                         
-                        expect(joke) == decodedJoke
+                        expect(mockedJoke) == decodedJoke
                     }
                 }
                 

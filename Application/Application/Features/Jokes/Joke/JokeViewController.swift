@@ -66,7 +66,9 @@ final class JokeViewController: BaseViewController {
 extension JokeViewController {
     
     private func setup() {
+        
         setupActionButton()
+        setupActivityButton()
     }
     
     private func setupActionButton() {
@@ -74,7 +76,27 @@ extension JokeViewController {
         actionButton.backgroundColor = .mainRed
         actionButton.layer.cornerRadius = actionButton.frame.height / 2
     }
+    
+    private func setupActivityButton() {
+        
+        let activityButton = UIBarButtonItem(
+            barButtonSystemItem: .action,
+            target: self,
+            action: nil)
+        navigationItem.rightBarButtonItem = activityButton
+    }
 }
+
+////-----------------------------------------------------------------------------
+//// MARK: - Private methods - Actions
+////-----------------------------------------------------------------------------
+//
+//extension JokeViewController {
+//    
+//    @objc private func activityButtonTap() {
+//        viewModel.actionButtonTap
+//    }
+//}
 
 //-----------------------------------------------------------------------------
 // MARK: - Private methods - Binding
@@ -109,15 +131,26 @@ extension JokeViewController {
         
         viewModel.title.bind(to: navigationItem.rx.title).disposed(by: disposeBag)
         viewModel.description.bind(to: descriptionLabel.rx.text).disposed(by: disposeBag)
+        
         viewModel.imageData
             .observeOn(MainScheduler.instance)
             .filter { $0 != nil }
             .map { UIImage(data: $0!) }
             .bind(to: imageView.rx.image)
             .disposed(by: disposeBag)
+        viewModel.isActivityButtonEnabled
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] isEnabled in
+                self?.navigationItem.rightBarButtonItem?.isEnabled = isEnabled
+            })
+            .disposed(by: disposeBag)
+        
         actionButton.rx.tap
             .throttle(.milliseconds(1200), scheduler: MainScheduler.instance)
             .bind(to: viewModel.actionButtonTap)
+            .disposed(by: disposeBag)
+        navigationItem.rightBarButtonItem?.rx.tap
+            .bind(to: viewModel.activityButtonTap)
             .disposed(by: disposeBag)
     }
 }
