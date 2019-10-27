@@ -61,6 +61,9 @@ final class JokesCoordinatorUITests: KIFTestCase {
         
         tester?.waitForView(withAccessibilityLabel: "JokeViewController.description")
         tester?.waitForView(withAccessibilityLabel: "JokeViewController.imageView")
+        
+        tester?.tapView(withAccessibilityLabel: "JokeViewController.activityButton")
+        tester?.wait(forTimeInterval: 1.0)
     }
     
     func testJokeCoordinatorFailureFetchingCategories() {

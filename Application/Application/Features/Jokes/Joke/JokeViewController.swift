@@ -83,6 +83,9 @@ extension JokeViewController {
             barButtonSystemItem: .action,
             target: self,
             action: nil)
+        activityButton.accessibilityLabel = "JokeViewController.activityButton"
+        activityButton.isAccessibilityElement = true
+        
         navigationItem.rightBarButtonItem = activityButton
     }
 }
