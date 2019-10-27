@@ -89,6 +89,14 @@ extension JokesCoordinator {
             activityItems: [url],
             applicationActivities: nil)
         
+        if UIDevice.current.userInterfaceIdiom == .pad,
+            let sourceView = navigationController?.viewControllers.last?.view,
+            let popoverPresentationController = viewController.popoverPresentationController {
+            
+            #warning("Tiago Leme: Fix iPad popover presentation")
+            popoverPresentationController.sourceView = sourceView
+        }
+        
         present(viewController)
     }
 }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JokeViewController" customModule="Application" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JokeViewController" customModule="ChuckNorris" customModuleProvider="target">
             <connections>
                 <outlet property="actionButton" destination="UTT-eM-efa" id="42H-0T-TE8"/>
                 <outlet property="descriptionLabel" destination="IMp-9v-ycC" id="hQd-K7-OYX"/>
@@ -44,6 +44,7 @@
                     <accessibility key="accessibilityConfiguration" identifier="JokeViewController.actionButton" label="JokeViewController.actionButton"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="0Q0-F1-cQk"/>
+                        <constraint firstAttribute="width" priority="750" constant="400" id="rmG-67-uIn"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <state key="normal" title="SHOW ME ANOTHER ONE">
@@ -56,10 +57,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="UTT-eM-efa" secondAttribute="bottom" constant="20" id="6TS-W1-4rW"/>
                 <constraint firstItem="avm-Y9-I1X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HsW-Db-jTD"/>
                 <constraint firstItem="IMp-9v-ycC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="O6Y-PL-qB3"/>
-                <constraint firstItem="UTT-eM-efa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SJi-Tc-DjN"/>
+                <constraint firstItem="UTT-eM-efa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SJi-Tc-DjN"/>
                 <constraint firstItem="IMp-9v-ycC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="g1j-Le-dOY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UTT-eM-efa" secondAttribute="trailing" constant="20" id="lLG-XT-Aim"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UTT-eM-efa" secondAttribute="trailing" constant="20" id="lLG-XT-Aim"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IMp-9v-ycC" secondAttribute="trailing" constant="20" id="m1b-vT-kvC"/>
+                <constraint firstItem="UTT-eM-efa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oIC-3T-eoG"/>
                 <constraint firstItem="IMp-9v-ycC" firstAttribute="top" secondItem="avm-Y9-I1X" secondAttribute="bottom" constant="20" id="yFu-Nm-HdQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

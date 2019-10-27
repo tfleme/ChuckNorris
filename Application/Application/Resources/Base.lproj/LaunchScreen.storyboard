@@ -17,14 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chucknorris_logo" translatesAutoresizingMaskIntoConstraints="NO" id="mVm-R3-Qrk">
-                                <rect key="frame" x="50" y="338.5" width="314" height="219"/>
+                                <rect key="frame" x="50" y="229" width="314" height="438"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="400" id="kL4-9B-82y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mVm-R3-Qrk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1sX-tZ-fIG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mVm-R3-Qrk" secondAttribute="trailing" constant="50" id="7uC-8M-J7R"/>
-                            <constraint firstItem="mVm-R3-Qrk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="HEb-ht-g33"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mVm-R3-Qrk" secondAttribute="trailing" constant="50" id="7uC-8M-J7R"/>
+                            <constraint firstItem="mVm-R3-Qrk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="HEb-ht-g33"/>
                             <constraint firstItem="mVm-R3-Qrk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bDc-Av-zRW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -36,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chucknorris_logo" width="360" height="219"/>
+        <image name="chucknorris_logo" width="720" height="438"/>
     </resources>
 </document>

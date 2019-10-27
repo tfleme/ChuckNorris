@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="Application" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="ChuckNorris" customModuleProvider="target">
             <connections>
                 <outlet property="actionButton" destination="aJW-sg-BMR" id="rLI-7B-svT"/>
                 <outlet property="contentView" destination="UcN-2C-ySu" id="9mt-zi-cGh"/>
@@ -60,6 +60,7 @@
                         <constraint firstAttribute="trailing" secondItem="Noi-5k-FtH" secondAttribute="trailing" constant="20" id="02Y-gQ-hfZ"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="11C-4P-GFv"/>
                         <constraint firstItem="aJW-sg-BMR" firstAttribute="top" secondItem="Noi-5k-FtH" secondAttribute="bottom" constant="20" id="7Ik-OY-sYP"/>
+                        <constraint firstAttribute="width" priority="750" constant="400" id="ILG-hp-Ous"/>
                         <constraint firstItem="aJW-sg-BMR" firstAttribute="leading" secondItem="Z87-bP-I59" secondAttribute="leading" constant="20" id="TuD-MI-C1q"/>
                         <constraint firstItem="gSs-bO-Njn" firstAttribute="leading" secondItem="UcN-2C-ySu" secondAttribute="leading" constant="10" id="aGn-7z-0sC"/>
                         <constraint firstItem="Z87-bP-I59" firstAttribute="bottom" secondItem="aJW-sg-BMR" secondAttribute="bottom" constant="20" id="aZ0-bc-oUw"/>
@@ -74,8 +75,8 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.49526434075342468" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UcN-2C-ySu" secondAttribute="trailing" constant="40" id="1dB-H4-HB0"/>
-                <constraint firstItem="UcN-2C-ySu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="CdS-ES-Xkj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UcN-2C-ySu" secondAttribute="trailing" constant="40" id="1dB-H4-HB0"/>
+                <constraint firstItem="UcN-2C-ySu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="CdS-ES-Xkj"/>
                 <constraint firstItem="UcN-2C-ySu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="P09-8c-awc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UcN-2C-ySu" secondAttribute="bottom" constant="20" id="box-fb-0GM"/>
                 <constraint firstItem="UcN-2C-ySu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gLm-OU-aff"/>
