@@ -53,7 +53,6 @@
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:..\/Domain\/Domain.xcodeproj",
         "identifier" : "A10CD87A2362522E00E5CA9F",
@@ -61,7 +60,6 @@
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:..\/Services\/Services.xcodeproj",
         "identifier" : "A11D5E8F2361261500244E92",
