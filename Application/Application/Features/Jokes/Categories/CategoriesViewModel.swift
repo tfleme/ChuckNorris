@@ -103,7 +103,7 @@ extension CategoriesViewModel {
                 
                 let alertViewModel = AlertViewModel(
                     title: error.title,
-                    message: "We're having problems fetching somo joke categories",
+                    message: "We're having problems fetching categories",
                     actionButtonTitle: "TRY AGAIN",
                     actionButtonTapHandler: { [weak self] in
                         self?.fetchCategories()
