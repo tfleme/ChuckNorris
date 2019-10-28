@@ -2,7 +2,7 @@
 
 A simple iOS app that lets you read some Chuck Norries jokes randomly based on categories
 
-![](Media/ChuckNorris.png)
+![](Media/ChuckNorris.gif)
 
 ## Architecture
 
